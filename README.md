@@ -58,7 +58,8 @@ NGINX is served locally and the story is opened through localhost.
 1. Make sure nginx is running:
 ```bash
 brew services start nginx
-
+...
+```
 
 2. Copy the adventure/ folder into the Homebrew NGINX web root:
 PREFIX="$(brew --prefix)"
