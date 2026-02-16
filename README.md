@@ -58,3 +58,20 @@ NGINX is served locally and the story is opened through localhost.
 1. Make sure nginx is running:
 ```bash
 brew services start nginx
+
+
+2. Copy the adventure/ folder into the Homebrew NGINX web root:
+PREFIX="$(brew --prefix)"
+sudo rm -rf "$PREFIX/var/www/adventure"
+sudo cp -R ./adventure "$PREFIX/var/www/adventure"
+sudo chmod -R 755 "$PREFIX/var/www/adventure"
+brew services restart nginx
+
+
+3. Open in the browser:
+http://localhost:8080/adventure/inicio/index.html
+
+Demo Video
+(Paste your video link here)
+Author
+Daniel Sandoval - 24885
